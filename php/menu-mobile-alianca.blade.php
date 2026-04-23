@@ -2,7 +2,7 @@
     <a href="#" class="open-submenu"> alianças </a>
     <div class="submenu">
         <div class="custom-back">
-            <img src="{{ path('arrow-submenu-right.png') }}" >
+            <img src="{{ path('arrow-submenu-right.png') }}">
             alianças
         </div>
         <ul>
@@ -35,7 +35,8 @@
                     <div class="item-menu">
                         <a href="/aliancas-anatomicas-ouro" title="Alianças anatômicas">
                             <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta das alianças anatomicas ">anatômicas
+                                <img src="{{ path('arrow-menu-categoria.png') }}"
+                                    alt="seta das alianças anatomicas ">anatômicas
                             </span>
                         </a>
                     </div>
@@ -72,7 +73,8 @@
                     <div class="item-menu">
                         <a href="/aliancas-concavas-modelos" title="Alianças concavas modelos">
                             <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta das alianças concavas modelos ">
+                                <img src="{{ path('arrow-menu-categoria.png') }}"
+                                    alt="seta das alianças concavas modelos ">
                                 Côncavas
                             </span>
                         </a>
@@ -80,7 +82,8 @@
                     <div class="item-menu">
                         <a href="/aliancas-retas-quadradas" title="Alianças retas quadradas">
                             <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta das alianças retas quadradas">
+                                <img src="{{ path('arrow-menu-categoria.png') }}"
+                                    alt="seta das alianças retas quadradas">
                                 Retas
                             </span>
                         </a>
@@ -99,7 +102,7 @@
                                 <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta das alianças unitárias">
                                 alianças unitárias
                             </span>
-            
+
                         </a>
                     </div>
 
@@ -125,12 +128,13 @@
 
             </li>
         </ul>
-     
-            <a class="ver-todos-btn" href="/aliancas-de-casamento" title="ver todos em Aliança">Ver todos</a>
-       
-  
+
+        <a class="ver-todos-btn" href="/aliancas-de-casamento" title="ver todos em Aliança">Ver todos</a>
+
+
         <div class="banner-menu-alianca banner-menu">
-            <a href="https://api.whatsapp.com/send?phone=5511959646000&amp;text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site " title="banner menu aliança de casamento">
+            <a href="https://api.whatsapp.com/send?phone=5511959646000&amp;text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20site "
+                title="banner menu aliança de casamento">
                 <img src="{{ path('banner-alianca-casamento.png') }}" alt="banner alianca casamento mobile ">
             </a>
         </div>

@@ -200,7 +200,6 @@
       <span aria-hidden="true" style="color: #bbb; margin: 0 8px;">|</span>
     </li>
 	 <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" >
-      <a href="{{ url()->current() ? strtok(url()->current(), '?') : '' }}" itemprop="item">
         <span itemprop="name"><strong>{{$produto->identification->name}}</strong></span>
       </a>
       <meta itemprop="position" content="3">
@@ -332,8 +331,7 @@
                       @foreach($produto->images as $image)
                           <div class="img old ">
                           <img class="my-image-links" data-gall="gallery01" href="{{thumb($image->source)}}" src="{{thumb($image->source)}}"
-                          @if($produto->extraFields->has('alt_imagens')) alt="{{ $produto->extraFields->get('alt_imagens')->values->first()->value }}" @endif
-                          @if($produto->extraFields->has('title_imagens')) title="{{ $produto->extraFields->get('title_imagens')->values->first()->value }}" @endif>
+                         >
                           </div>  
                       @endforeach
 
@@ -466,9 +464,7 @@
             @else
          @foreach($produto->images as $image)
                     <div class="img">
-                      <img id="zoom_01" data-zoom-image="{{thumb($image->source)}}" src="{{thumb($image->source)}}"
-                      @if($produto->extraFields->has('alt_imagens')) alt="{{ $produto->extraFields->get('alt_imagens')->values->first()->value }}" @endif
-                      @if($produto->extraFields->has('title_imagens')) title="{{ $produto->extraFields->get('title_imagens')->values->first()->value }}" @endif>
+                      <img id="zoom_01" data-zoom-image="{{thumb($image->source)}}" src="{{thumb($image->source)}}">
                     </div>  
                 @endforeach
                 @if($produto->extraFields->has('link_video'))
@@ -1118,32 +1114,7 @@
    <iframe src=""></iframe>     
 </div>
         
-        @if($produto->extraFields->has('produto_relacionado_feminino') && $produto->extraFields->has('produto_relacionado_masculino'))
-        <div id="produtos-relacionados-genero" class="text-center">
-            <!--Compre separado:-->
-            Compre a unidade:
-            <div>
-              <div>
-                @foreach($produto->extraFields->get('produto_relacionado_feminino')->values as $itemF)
-                  @itemAvailable($itemF->record)  
-                    <a @if($itemF->record->urls->first()->url) href="{{url($itemF->record->urls->first()->url)}}" @endif>
-                      <img src="{{ path('anel-feminino.png') }}">
-                    </a>
-                  @enditemAvailable
-                @endforeach
-              </div>
-              <div>
-                @foreach($produto->extraFields->get('produto_relacionado_masculino')->values as $itemM)
-                  @itemAvailable($itemM->record) 
-                    <a @if($itemM->record->urls->first()->url) href="{{url($itemM->record->urls->first()->url)}}" @endif>
-                      <img src="{{ path('anel-masculino.png') }}">
-                    </a>
-                  @enditemAvailable
-                @endforeach
-              </div>
-            </div>
-        </div>
-        @endif
+       
         @if($produto->extraFields->has('complete_o_visual'))
 
      <div class="completedLook">
@@ -1282,8 +1253,7 @@
     <div class="title text-center">Dúvidas frequentes</div>
     <div class="retangulo"></div>
     <div id="div-perguntas">
-      @foreach($duvidasfrequentesproduto->records as $faq)
-        @if($faq->pergunta != null && $faq->resposta != null)
+      @foreach($duvidasfrequentesproduto->records->filter(function($faq) { return $faq->pergunta != null && $faq->resposta != null; })->take(4) as $faq)
         <div>
           <h2 id="pergunta-{{ $faq->id }}" class="div-pergunta">
             {{ $faq->pergunta->values->first->value->value }}
@@ -1298,7 +1268,6 @@
             @endif
           </div>
         </div>
-        @endif
       @endforeach
     </div>
     <div class="text-center">
@@ -1307,32 +1276,6 @@
       </a>
     </div>
   </div>
-@endif
-@if($clienteimagem->records->count() > 0)
-    <div class="clientArea container">
-        <h3>Inspire-se • Clientes Reisman </h3>
-        <div class="divider"></div>
-        <h4>Sua história de amor será a próxima por aqui? </h4>
-        <div class="clientsSlider1 swiper">
-        <a class="slick-prev1">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.4082 20C15.33 20 15.2525 19.9832 15.1806 19.9506C15.1087 19.918 15.0438 19.8703 14.9898 19.8105L8.2947 12.7445C8.20132 12.6466 8.1272 12.5301 8.07662 12.4018C8.02604 12.2735 8 12.1358 8 11.9968C8 11.8578 8.02604 11.7202 8.07662 11.5918C8.1272 11.4635 8.20132 11.3471 8.2947 11.2492L14.9898 4.1832C15.0447 4.12512 15.11 4.07905 15.1818 4.04761C15.2536 4.01618 15.3305 4 15.4082 4C15.4859 4 15.5629 4.01618 15.6347 4.04761C15.7065 4.07905 15.7717 4.12512 15.8267 4.1832C15.8816 4.24128 15.9252 4.31023 15.955 4.38612C15.9847 4.46201 16 4.54334 16 4.62548C16 4.70762 15.9847 4.78895 15.955 4.86484C15.9252 4.94073 15.8816 5.00968 15.8267 5.06776L9.28103 11.9968L15.8267 18.9259C15.9023 19.015 15.9524 19.1249 15.9711 19.2429C15.9899 19.3609 15.9766 19.4821 15.9328 19.5924C15.889 19.7027 15.8164 19.7976 15.7235 19.866C15.6307 19.9345 15.5213 19.9736 15.4082 19.9789V20Z" fill="currentColor"></path></svg>
-            
-        </a>
-        <a class="slick-next1">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.59175 20C8.47866 19.9947 8.36933 19.9555 8.27647 19.8871C8.18361 19.8187 8.11104 19.7238 8.06721 19.6135C8.02338 19.5031 8.01008 19.3819 8.02886 19.2639C8.04765 19.146 8.09774 19.036 8.17332 18.9469L14.7188 12.0179L8.17332 5.06776C8.06235 4.95046 8 4.79137 8 4.62548C8 4.45959 8.06235 4.3005 8.17332 4.1832C8.28429 4.0659 8.43481 4 8.59175 4C8.74869 4 8.89921 4.0659 9.01018 4.1832L15.7051 11.2492C15.7985 11.3471 15.8726 11.4635 15.9231 11.5918C15.9737 11.7202 15.9998 11.8578 15.9998 11.9968C15.9998 12.1358 15.9737 12.2735 15.9231 12.4018C15.8726 12.5301 15.7985 12.6466 15.7051 12.7445L9.01018 19.8105C8.95621 19.8703 8.8913 19.918 8.81937 19.9506C8.74744 19.9832 8.67 20 8.59175 20Z" fill="currentColor"></path></svg>
-            
-            </a>
-           <div class="swiper-wrapper">
-                @foreach($clienteimagem->records as $imgclients)
-                    <div class="imagemByClient swiper-slide">
-                        <img src="{{ $imgclients->imagem_clientes->values->first()->source  }}">  
-                    </div>
-                @endforeach
-            </div>
-            
-           
-        </div>
-    </div>    
 @endif
 @if($produto->extraFields->has('produtos_relacionados'))
   <div id="div-produtos-relacionados">
@@ -2166,7 +2109,6 @@ try {
         }
     }, 300);
 </script>
-  <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
 @endpush
 @push('scripts')
 <script src="{{ script('produto.js') }}" defer></script>

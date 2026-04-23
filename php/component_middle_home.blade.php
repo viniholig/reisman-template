@@ -8,14 +8,18 @@
             <div class="content">
                 <h3>Anéis de Noivado</h3>
                 <p>
-                    Não e sobre o valor do anel de noivado, é sobre o tamanho do gesto, o carinho. É sobre o cuidado em supreender a quem se ama, É, principalmente, sobre a sorte de encontrar o amor da sua vida. E não existe história mais linda que essa.
+                    Não e sobre o valor do anel de noivado, é sobre o tamanho do gesto, o carinho. É sobre o cuidado em
+                    supreender a quem se ama, É, principalmente, sobre a sorte de encontrar o amor da sua vida. E não
+                    existe história mais linda que essa.
                 </p>
                 <a class="btn-ver" href="/aneis-de-noivado">Veja Mais</a>
             </div>
             <div class="content">
                 <h3>Alianças de casamento</h3>
                 <p>
-            A aliança de casamento é a joia que remete ao sentimento. É a junção de diversas emoções em uma, simbolizada em um pequeno objeto em ouro. Só é entendido por quem está envolvido, não dá para explicar, apenas sentir
+                    A aliança de casamento é a joia que remete ao sentimento. É a junção de diversas emoções em uma,
+                    simbolizada em um pequeno objeto em ouro. Só é entendido por quem está envolvido, não dá para
+                    explicar, apenas sentir
                 </p>
                 <a class="btn-ver" href="/aliancas-de-casamento">Veja Mais</a>
             </div>

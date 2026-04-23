@@ -6,9 +6,11 @@
   text-align: center;
   right: 30px;
 }
+
 .filter-categoria .filtros-faixa-preco.actived {
   display: block;
 }
+
 .filter-categoria .filtros-faixa-preco .title {
   opacity: 0.5;
   display: flex;
@@ -16,10 +18,12 @@
   padding: 1rem 1rem 0;
   margin-bottom: 0;
 }
+
 .filter-categoria h3.collapse-filtro {
   justify-content: right;
   gap: 10px;
 }
+
 .filter-categoria h3.collapse-filtro.actived-btn img {
   transform: rotate(180deg);
 }
@@ -27,6 +31,7 @@
 @media screen and (max-width: 992px) {
   div#title-categoria h1 {
     margin-top: 2rem;
+    text-transform: uppercase;
   }
 }
 
@@ -43,7 +48,10 @@
     padding-left: 0;
   }
 }
-.coluna-spot-category, .coluna-spot-search {
+
+.coluna-spot-category,
+.coluna-spot-search {
   margin-top: 0;
 }
+
 /*# sourceMappingURL=categoria.css.map */

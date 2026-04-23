@@ -12,7 +12,8 @@
                     <div class="item-menu">
                         <a href="/aneis-de-formatura" title="Anéis de formatura">
                             <span>
-                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png" alt="seta dos Anéis de formatura" >
+                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png"
+                                    alt="seta dos Anéis de formatura">
                                 Celebre suas conquistas
                             </span>
 
@@ -27,7 +28,8 @@
                     <div class="item-menu">
                         <a href="/anel-de-15-anos-debutante" title="Brincos">
                             <span>
-                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png" alt="seta dos brincos">
+                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png"
+                                    alt="seta dos brincos">
                                 Um momento especial
                             </span>
                         </a>
@@ -43,7 +45,8 @@
                     <div class="item-menu">
                         <a href="/brincos-de-ouro-18k" title=" Anel de 15 anos">
                             <span>
-                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png" alt="seta dos anel de 15 anos">
+                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png"
+                                    alt="seta dos anel de 15 anos">
                                 elegância que ilumina
                             </span>
                         </a>
@@ -60,7 +63,8 @@
                     <div class="item-menu">
                         <a href="/aparadores-de-aliancas" title="Aparadores ">
                             <span>
-                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png" alt="seta dos aparadores">
+                                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/arrow-menu-categoria.png"
+                                    alt="seta dos aparadores">
                                 delicadeza nos detalhes
                             </span>
                         </a>
@@ -70,9 +74,9 @@
 
             </li>
         </ul>
-         <a class="ver-todos-btn" href="/joias" title="ver todos em joias">Ver todos</a>
-       
-        <div class="banner-menu-alianca banner-menu" >
+        <a class="ver-todos-btn" href="/joias" title="ver todos em joias">Ver todos</a>
+
+        <div class="banner-menu-alianca banner-menu">
             <a href="/loja-em-sao-paulo" title="nossa loja em são Paulo">
                 <img src="{{ path('banner-joias-menu.png') }}" alt="banner nossa loja em são paulo">
             </a>

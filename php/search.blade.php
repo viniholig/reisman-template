@@ -1,41 +1,42 @@
-@if(!request()->ajax())
-@extends(engine_view('base'))
-@section('conteudo')
-@section('title', 'Resultado da busca')
+@if (!request()->ajax())
+    @extends(engine_view('base-novo'))
+    @section('conteudo')
+    @section('title', 'Resultado da busca')
 
-<div id="title-busca" class="text-center font-serif">
-  Resultado da busca
-</div>
-<div class="retangulo"></div>
+    <div id="title-busca" class="text-center font-serif">
+        Resultado da busca
+    </div>
+    <div class="retangulo"></div>
 
-<div id="resultado-busca">
-  <div class="row text-center" canopus-showcase-infinite-scroll>
+    <div id="resultado-busca">
+        <div class="row text-center" canopus-showcase-infinite-scroll>
 @endif
-    @if($searchResult->items->isNotEmpty())
-      @foreach($searchResult->items as $item)
-      @if($item->prices->first()->price > 0)
-        <div class="col-lg-3 col-sm-12 coluna-spot-search">
-          @include(engine_view('produto-item-novo'))
-        </div>
-      @endif
-      @endforeach 
-    @else
+@if ($searchResult->items->isNotEmpty())
+    @foreach ($searchResult->items as $item)
+        @if ($item->prices->first()->price > 0)
+            <div class="col-lg-3 col-sm-12 coluna-spot-search card-search">
+                @include(engine_view('produto-item-novo'))
+            </div>
+        @endif
+    @endforeach
+@else
     <h5 style="margin-top: 30px">
-      Não foram encontrados resultados para a busca realizada.
+        Não foram encontrados resultados para a busca realizada.
     </h5>
-    @endif
-@if(!request()->ajax())   
+@endif
+@if (!request()->ajax())
     </div>
-    @if($searchResult->items->isNotEmpty() && $searchResult->items->count() >= 24)
-    <div class="div-carregar-mais text-center">
-        <a href="javascript:;" class="text-center btn btn-carregar-mais" canopus-showcase-infinite-scroll-more>Carregar mais</a>
-    </div>
+    @if ($searchResult->items->isNotEmpty() && $searchResult->items->count() >= 24)
+        <div class="div-carregar-mais text-center">
+            <a href="javascript:;" class="text-center btn btn-carregar-mais"
+                canopus-showcase-infinite-scroll-more>Carregar mais</a>
+        </div>
     @endif
-</div>
+    </div>
 
 
 
-<!--
+    <!--
 
 <section class="leituras">
 <div class="container">
@@ -84,18 +85,17 @@
 </div>
 </section>
 @push('afterPageScripts')
-<script>
-    $('.produto').each(function(index) {        
-        var that = this;
-        var t = setTimeout(function() { 
-            $(that).addClass("animated fadeIn"); 
-        }, 250 * index);        
-    });
-</script>
-
+    <script>
+        $('.produto').each(function(index) {
+            var that = this;
+            var t = setTimeout(function() {
+                $(that).addClass("animated fadeIn");
+            }, 250 * index);
+        });
+    </script>
 @endpush
 -->
-<script src="https://www.mercadopago.com/v2/security.js" view="search"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="search"></script>
 
 @endsection
 @endif

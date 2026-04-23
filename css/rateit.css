@@ -382,6 +382,7 @@ div.bigstars div.rateit-selected {
         padding-right: 0;
         border-right: none
     }
+
     .content-rating .content-comment .box-comment .box-like {
         padding-left: 0
     }
@@ -430,7 +431,7 @@ div.bigstars div.rateit-selected {
     text-transform: uppercase;
     color: #d9b162;
     font-weight: 700;
-    border: none!important;
+    border: none !important;
     margin: 0;
     padding: 0;
     line-height: 26px;
@@ -497,8 +498,13 @@ div.bigstars div.rateit-selected {
     cursor: pointer;
     border-radius: 2px;
 }
+
 @media screen and (max-width:768px) {
-    .content-rating .box-evaluation>div, .content-rating .box-evaluation .box-lf, .content-rating .box-evaluation .box-lf ul li .box-level, .content-rating .box-evaluation .box-lf ul li .box-numbers{
+
+    .content-rating .box-evaluation>div,
+    .content-rating .box-evaluation .box-lf,
+    .content-rating .box-evaluation .box-lf ul li .box-level,
+    .content-rating .box-evaluation .box-lf ul li .box-numbers {
         width: 100%;
     }
 }

@@ -1,80 +1,85 @@
-.page-custom.duvidas-frequentes .banner-page img{
+.page-custom.duvidas-frequentes .banner-page img {
     width: 100%;
 }
 
-.page-custom.duvidas-frequentes .banner-page{
+.page-custom.duvidas-frequentes .banner-page {
     margin-bottom: 104px;
 }
 
 
-.page-custom.duvidas-frequentes section.faq{
-        max-width: 840px;
+.page-custom.duvidas-frequentes section.faq {
+    max-width: 840px;
     margin: auto;
 }
-.page-custom.duvidas-frequentes .faq h2.faq-question button span{
 
-}
-.page-custom.duvidas-frequentes .faq h2.faq-question{
+.page-custom.duvidas-frequentes .faq h2.faq-question button span {}
 
-        line-height: 0;
+.page-custom.duvidas-frequentes .faq h2.faq-question {
+
+    line-height: 0;
     margin: 0;
     padding: 0 !important;
-  
+
 }
-.page-custom.duvidas-frequentes .faq h2.faq-question button{
-        background: transparent;
-              letter-spacing: 4px ;
-    font-weight: 400 ;
-    color: #1E1613 ;
+
+.page-custom.duvidas-frequentes .faq h2.faq-question button {
+    background: transparent;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: #1E1613;
     text-align: left;
-        font-size: 14px ;
-     line-height: 20px;
-    text-transform: uppercase ;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
     font-family: "Magnificent", sans-serif !important;
 }
-.page-custom.duvidas-frequentes .faq .faq-context{
+
+.page-custom.duvidas-frequentes .faq .faq-context {
     margin-bottom: 24px;
 }
 
-.page-custom.duvidas-frequentes .faq .faq-answer{
+.page-custom.duvidas-frequentes .faq .faq-answer {
     margin-top: 24px;
 }
 
-.page-custom.duvidas-frequentes .faq .answer-faq > div{
-        color: #727272 !important;
+.page-custom.duvidas-frequentes .faq .answer-faq>div {
+    color: #727272 !important;
     font-weight: 400 !important;
     font-size: 16px !important;
     font-family: Spectral, serif !important;
 }
 
-.page-custom.duvidas-frequentes section.faq{
-       padding-left: 24px;
-       padding-right: 24px;
+.page-custom.duvidas-frequentes section.faq {
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-@media screen and (min-width: 992px){
-    .page-custom.duvidas-frequentes section.faq{
+@media screen and (min-width: 992px) {
+    .page-custom.duvidas-frequentes section.faq {
         padding: 0;
     }
-    .page-custom.duvidas-frequentes .faq h2.faq-question button{
+
+    .page-custom.duvidas-frequentes .faq h2.faq-question button {
         font-size: 20px;
     }
-    .page-custom.duvidas-frequentes .faq .faq-context{
+
+    .page-custom.duvidas-frequentes .faq .faq-context {
         margin-bottom: 64px;
     }
 }
 
-@media screen and (max-width: 767px){
-   .page-custom.duvidas-frequentes .banner-page{
-       margin-bottom: 69px;
-   } 
-   
+@media screen and (max-width: 767px) {
+    .page-custom.duvidas-frequentes .banner-page {
+        margin-bottom: 69px;
+    }
+
 }
-.page-abouts .banner-bloco-01 img{
+
+.page-abouts .banner-bloco-01 img {
     width: 100%;
 }
 
-.page-abouts .banner-bloco-01 .context-text{
+.page-abouts .banner-bloco-01 .context-text {
     position: absolute;
     z-index: 1;
     top: auto;
@@ -84,7 +89,11 @@
     text-align: left;
 }
 
-.page-abouts .banner-bloco-01 .context-text h2{
+section.page-abouts {
+    background: #000;
+}
+
+.page-abouts .banner-bloco-01 .context-text h2 {
     font-size: 39px;
     font-weight: 400;
     letter-spacing: 3px;
@@ -93,191 +102,30 @@
     font-family: "Magnificent", sans-serif;
 }
 
-.page-abouts .banner-bloco-01 .context-text p{
+.page-abouts .banner-bloco-01 .context-text p {
     margin: 0;
     font-size: 24.62px;
     font-weight: 400;
     color: #FFFFFF;
 }
 
-.page-abouts .banner-bloco-02 {
-    padding-top: 87px;
-    padding-bottom: 157px;
-    text-align: center;
-}
 
-.page-abouts .banner-bloco-02 h3{
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 3px;
-    color: #1E1613;
-    text-transform: uppercase;
-    font-family: "Magnificent", sans-serif;
-    margin-bottom: 24px;
-}
-
-.page-abouts .banner-bloco-02 span{
-    font-size: 20px;
-    font-weight: 400;
-    color: #727272;
-    font-family: Spectral, serif;
-}
-
-.page-abouts .banner-bloco-03 {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.page-abouts .banner-bloco-03 .context-text{
-
-}
-
-.page-abouts .banner-bloco-03 > div{
-    flex: 1;   
-}
-
-@media screen and (max-width: 991px){
-    .page-abouts .banner-bloco-03{
-        flex-direction: column;
-    }
-}
-
-
-.page-abouts .banner-bloco-06{
+.page-abouts .banner-bloco-06 {
     display: flex;
     background-color: #13100F;
 }
 
-.page-abouts .banner-bloco-06 > div{
+.page-abouts .banner-bloco-06>div {
     flex: 1;
-
+    padding: 0 24px;
 }
 
-.page-abouts .banner-bloco-06 .context-img{
+.page-abouts .banner-bloco-06 .context-img {
     order: -1;
 }
 
-.page-abouts .banner-bloco-06 .context-text{
+.page-abouts .banner-bloco-06 .context-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.page-abouts .banner-bloco-06 .context-text .context{
-    max-width: 479px;
-    margin: auto;
-    color: #fff;
-}
-
-.page-abouts .banner-bloco-06 .context-text .context h3{
-
-    color: #FFFFFF;
-}
-
-.page-abouts .banner-bloco-06 img{
-    width: 100%;
-}
-
-.page-abouts .banner-bloco-07 .context-imgs{
-        display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-}
-
-.page-abouts .banner-bloco-07 .context-imgs img{
-    width: 100%;
-}
-
-.page-abouts .banner-bloco-07 .context-imgs figure{
-    position: relative;
-}
-
-.page-abouts .banner-bloco-07 .context-imgs figure span{
-    position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 100px;
-    font-size: 20px;
-    font-weight: 400;
-    color: #FFFFFF;
-    text-transform: uppercase;
-    font-family: "Magnificent", sans-serif;
-}
-
-.page-abouts .banner-bloco-07 .context-text span{
-    font-size: 16px;
-    font-weight: 400;
-    color: #727272;
-    font-family: Spectral, serif;
-    margin-bottom: 39px;
-}
-
-
-.banner-shop{
-    display: flex;
-}
-
-.banner-shop > div {
-    flex: 1;
-}
-
-.banner-shop .context-text .context{
-    max-width: 459px;
-}
-
-.banner-shop .context-text .context span{
-      font-size: 16px;
-    font-weight: 400;
-    color: #727272;
-    font-family: Spectral, serif;
-
-}
-
-.banner-shop img{
-    width: 100%;
-}
-
-@media screen and (max-width: 1054px){
-    .page-abouts .banner-bloco-02{
-        padding-top: 56px;
-        padding-bottom: 56px;
-    }
-    .page-abouts .context-text span{
-        font-size: 14px !important;
-    }
-    .page-abouts .banner-bloco-02 span{
-        font-size: 14px;
-    }
-    .page-abouts .banner-bloco-03{
-        flex-direction: column;
-        row-gap: 24px;
-    }
-    .page-abouts .banner-bloco-06{
-        flex-direction: column;
-    }
-    .page-abouts .banner-bloco-03 .context-text{
-        order: 2;
-    }
-    .page-abouts .banner-bloco-03 h3{
-        max-width: 85%;
-    }
-    .page-abouts .banner-bloco-06 .context-text{
-        padding-top: 55px;
-        padding-bottom: 55px;
-    }
-    .page-abouts .context-text{
-        max-width: 100% !important;
-    }
-    .page-abouts img{
-        width: 100% ;
-    }
-    .page-abouts h3{
-        text-align: left;
-        font-size: 18px;
-    }
-    .page-abouts .banner-bloco-02 h3{
-        font-size: 20px;
-        text-align: center;
-    }
 }

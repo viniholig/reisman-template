@@ -1,8 +1,8 @@
-@if(!request()->ajax())
-<!DOCTYPE html>
-<html lang="pt-br">
+@if (!request()->ajax())
+    <!DOCTYPE html>
+    <html lang="pt-br">
 
-  <h2>Tesssssss</h2>
+    <h2>Tesssssss</h2>
 
-</html>
+    </html>
 @endif

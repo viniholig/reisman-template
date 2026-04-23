@@ -1,12 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    
-  console.log('Script Main carregado');
-  
-     setTimeout(()=> {
-          const slinky = $('#navMenuMobile').slinky()
-  
-  },1000)
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Script Main carregado");
 
+  setTimeout(() => {
+    const slinky = $("#navMenuMobile").slinky();
+  }, 1000);
 
   document.querySelectorAll("button.btn-show-dados").forEach((botao) => {
     botao.addEventListener("click", function () {
@@ -16,22 +13,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-  
-  
-    sendEmailNewsletter();
+
+  sendEmailNewsletter();
   setupImageCardChange();
   formatAllProductPrices();
   setupSearchToggle();
 });
 
-
 function sendEmailNewsletter() {
   const form = document.querySelector(".footer-submit-wrapper form");
   const button = form.querySelector(
-    "footer .footer-menu .form-newsletter .footer-submit-wrapper button.btn.btn-primary.shadow-none.ls-10"
+    "footer .footer-menu .form-newsletter .footer-submit-wrapper button.btn.btn-primary.shadow-none.ls-10",
   );
   const emailInput = form.querySelector(
-    "input.form-control.mb-0.email-newsletter"
+    "input.form-control.mb-0.email-newsletter",
   );
 
   button.addEventListener("click", function (e) {
@@ -60,55 +55,71 @@ function sendEmailNewsletter() {
   });
 }
 
-
-
 // === Troca de imagem, link, nome e preço nos cards ===
 function setupImageCardChange() {
-    const receiveImgs = document.querySelectorAll('.receiveImgs > .outlineColorImage');
-    
-receiveImgs.forEach((img) => {
-  img.addEventListener('click', function() {
-    // Alterar classe ativa
-    img.parentElement.querySelectorAll('.outlineColorImage').forEach(sibling => sibling.classList.remove('active', 'nameItem'));
-    img.classList.add('active', 'nameItem');
-    
-    // Alterar imagem, link, nome e preço
-    const productBlock = img.closest('.product-block');
-    productBlock.querySelector('.img-card img').src = img.getAttribute('data-link');
-    productBlock.querySelector('a').href = img.getAttribute('data-url');
-    // productBlock.querySelector('.preco-produto-spot1').textContent = img.getAttribute('data-price');
-    productBlock.querySelector('.preco-produto-spot-price  .price-main .value').textContent = img.getAttribute('data-price-vista');
-    productBlock.querySelector('.preco-produto-spot-price .price-installment').textContent = img.getAttribute('data-price-parcelament');
-    // Pegar a cor do elemento ativo
-    const activeItem = productBlock.querySelector('.outlineColorImage.active');
-    const colorName = activeItem ? activeItem.textContent.trim() : ''; // Assumindo que o texto da cor está dentro do elemento
-    productBlock.querySelector('.name-color-product span').textContent = colorName;
-    
-      formatAllProductPrices();
-  });
-});
+  const receiveImgs = document.querySelectorAll(
+    ".receiveImgs > .outlineColorImage",
+  );
 
+  receiveImgs.forEach((img) => {
+    img.addEventListener("click", function () {
+      // Alterar classe ativa
+      img.parentElement
+        .querySelectorAll(".outlineColorImage")
+        .forEach((sibling) => sibling.classList.remove("active", "nameItem"));
+      img.classList.add("active", "nameItem");
+
+      // Alterar imagem, link, nome e preço
+      const productBlock = img.closest(".product-block");
+      productBlock.querySelector(".img-card img").src =
+        img.getAttribute("data-link");
+      productBlock.querySelector("a").href = img.getAttribute("data-url");
+      // productBlock.querySelector('.preco-produto-spot1').textContent = img.getAttribute('data-price');
+      productBlock.querySelector(
+        ".preco-produto-spot-price  .price-main .value",
+      ).textContent = img.getAttribute("data-price-vista");
+      productBlock.querySelector(
+        ".preco-produto-spot-price .price-installment",
+      ).textContent = img.getAttribute("data-price-parcelament");
+      // Pegar a cor do elemento ativo
+      const activeItem = productBlock.querySelector(
+        ".outlineColorImage.active",
+      );
+      const colorName = activeItem ? activeItem.textContent.trim() : ""; // Assumindo que o texto da cor está dentro do elemento
+      productBlock.querySelector(".name-color-product span").textContent =
+        colorName;
+
+      formatAllProductPrices();
+    });
+  });
 }
 
 // === Formata preços com spans ===
 function formatAllProductPrices() {
-  document.querySelectorAll('.product-block .description .preco-produto-spot').forEach((element) => {
-    let text = element.textContent.trim().replace('à vista', 'no pix');
-    const match = text.match(/^(.*?ou\s)(.*)$/);
+  document
+    .querySelectorAll(".product-block .description .preco-produto-spot")
+    .forEach((element) => {
+      let text = element.textContent.trim().replace("à vista", "no pix");
+      const match = text.match(/^(.*?ou\s)(.*)$/);
 
-    if (match) {
-      const firstPart = match[1].replace('ou', '').trim();
-      const secondPart = match[2].trim().replace('R$', '').replace('no pix', '');
-      element.innerHTML = `<span class="first">${firstPart}</span> <span class="last">${secondPart}</span>`;
-    }
-  });
+      if (match) {
+        const firstPart = match[1].replace("ou", "").trim();
+        const secondPart = match[2]
+          .trim()
+          .replace("R$", "")
+          .replace("no pix", "");
+        element.innerHTML = `<span class="first">${firstPart}</span> <span class="last">${secondPart}</span>`;
+      }
+    });
 }
 
 // === Lógica de toggle do campo de busca ===
 function setupSearchToggle() {
-  document.addEventListener('click', (event) => {
+  document.addEventListener("click", (event) => {
     const searchItem = event.target.closest("header .aside-box .item.search");
-    const searchClose = event.target.closest(".header-search.actived button.close-seach");
+    const searchClose = event.target.closest(
+      ".header-search.actived button.close-seach",
+    );
 
     if (searchItem) {
       searchItem.classList.toggle("actived");
@@ -126,22 +137,19 @@ function setupSearchToggle() {
   });
 }
 
-
 function toggleHeaderOnScroll() {
-  const header = document.querySelector('header');
-      
+  const header = document.querySelector("header");
+
   if (window.scrollY > 0) {
-      header.classList.add('header-flutuante');
-      header.classList.add('header-flutuante-fixed');
-        setTimeout(() => {
-      header.classList.remove('header-flutuante-fixed');
+    header.classList.add("header-flutuante");
+    header.classList.add("header-flutuante-fixed");
+    setTimeout(() => {
+      header.classList.remove("header-flutuante-fixed");
     }, 1000);
   } else {
-      header.classList.remove('header-flutuante');
+    header.classList.remove("header-flutuante");
   }
 }
-document.addEventListener('DOMContentLoaded', () => {
-    
-    window.addEventListener('scroll', toggleHeaderOnScroll);
-
+document.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("scroll", toggleHeaderOnScroll);
 });

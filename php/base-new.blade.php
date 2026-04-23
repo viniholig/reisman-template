@@ -1,9 +1,10 @@
-@if(!request()->ajax())
-<!DOCTYPE html>
-<html lang="pt-br">
-  @include(engine_view('header'))
-  
-  @yield('conteudo')
-  @include(engine_view('footer-categoria'))
-</html>
+@if (!request()->ajax())
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    @include(engine_view('header'))
+
+    @yield('conteudo')
+    @include(engine_view('footer-categoria'))
+
+    </html>
 @endif

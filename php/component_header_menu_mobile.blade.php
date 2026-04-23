@@ -5,11 +5,13 @@
         <div class="logo-menu">
             <div class="logo">
                 <a href="/" class="active">
-                    <img src="https://assets.betalabs.net/production/reisman/images/stores/1/logo-novo-branco.svg" alt="Logo">
+                    <img src="https://assets.betalabs.net/production/reisman/images/stores/1/logo-novo-branco.svg"
+                        alt="Logo">
                 </a>
             </div>
             <button class="close-icon ta-header-menu-close" aria-label="Fechar menu">
-                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/close-search.png" alt="Fechar">
+                <img src="https://assets.betalabs.net/production/reisman/images/stores/1/close-search.png"
+                    alt="Fechar">
             </button>
         </div>
 

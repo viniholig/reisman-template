@@ -6,19 +6,19 @@
 
 
 @push('tags')
-
-    <meta property="fb:admins" content="home "/>
-   
+    <meta property="fb:admins" content="home " />
 @endpush
 
-@section('metadescription', 'Alianças de Casamento e Anéis de Noivado | Reisman 1967' )
+@section('metadescription', 'Alianças de Casamento e Anéis de Noivado | Reisman 1967')
 
 
 @include(@engine_view('component_fullbanner'))
 
 <section class="container text-middle">
     <h1>Made with love by Reisman since 1967</h1>
-    <span>Somos especialistas na criação e fabricação de joias finas, produzidas com uma combinação de alta tecnologia e um trabalho artesanal delicado, executado por uma equipe altamente qualificada e reconhecida por sua excelência.</span>
+    <span>Somos especialistas na criação e fabricação de joias finas, produzidas com uma combinação de alta tecnologia e
+        um trabalho artesanal delicado, executado por uma equipe altamente qualificada e reconhecida por sua
+        excelência.</span>
 </section>
 
 <script type="application/ld+json">
