@@ -1,173 +1,57 @@
-<div class="submenu-div-new grid text-left" >
+<nav class="submenu-menu  submenu-aneis-noivado" aria-label="Categorias de anéis de noivado">
+    <ul class="menu">
 
-    <div class="megamenu-new">
-        <ul class="has-children">
-            <li class="compre-por-estilo"> 
-                <h2 class="title-menu">Compre por estilo</h2>
-                <ul>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-classicos-tradicionais" title="Anéis de noivado clássico tradicionais">
-                            <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="Anéis de noivado clássico tradicionais">    
-                                Clássico
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-halo-ring" title="Anéis de noivado halo ring">
-                            <span>
-                            <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta dos Anéis de noivado halo ring">
-                                Halo
-                            </span>
-                
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-modernos" title="Anéis de noivado mordeno">
-                            <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta dos Anéis de noivado mordeno">Moderno
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-romanticos" title="Anéis de noivado Romântico">
-                            <span>
-                            <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta dos Anéis de noivado romântico">Romântico
-                        </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/anel-de-noivado-solitario" title="Anéis de noivado Solitário">
-                            <span>
-                            <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta dos Anéis de noivado solitário">
-                            Solitário
-                            </span>
-                     
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="compre-por-diamantes">
-                <h2 class="title-menu">Compre por diamantes</h2>
-                <ul class="compre-por-diamantes-sub-one">
-                    <li class="item-menu">
-                        <a href="#" title="Anéis de diamantes">
-                            <span>
-                                <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta dos Anéis de noivado diamantes">
-                                Diamantes
-                            </span>
+        <li class="menu-coluna">
+            <span class="menu-title">Anéis de noivado por estilo</span>
+            <ul>
+                <li><a href="/aneis-de-noivado-classicos-tradicionais"
+                        title="Anéis de noivado clássicos e tradicionais">Anéis de noivado clássicos</a></li>
+                <li><a href="/aneis-de-noivado-halo-ring" title="Anéis de noivado estilo halo">Anéis de noivado halo</a>
+                </li>
+                <li><a href="/aneis-de-noivado-modernos" title="Anéis de noivado modernos">Anéis de noivado modernos</a>
+                </li>
+                <li><a href="/aneis-de-noivado-romanticos" title="Anéis de noivado românticos">Anéis de noivado
+                        românticos</a></li>
+                <li><a href="/anel-de-noivado-solitario" title="Anel de noivado solitário">Anel de noivado solitário</a>
+                </li>
+            </ul>
+        </li>
 
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/diamantes-certificados-laudo-ibgm-gia" title="diamantes certificados">
-                            <span>
-                            <img src="{{ path('arrow-menu-categoria.png') }}" alt="seta do logo gia">
-                            <img src="{{ path('gia-menu.png') }}" alt="imagem da gia">
-
-                            </span>
-                        </a>
-                    </li>
-
-                </ul>
-          
-            </li>
-
-            <li class="compre-por-pedras-coloridas">
-            <h2 class="title-menu">Compre por pedras coloridas</h2>
-                <ul class="compre-por-diamantes-sub-one">
-                    <div class="grid-menu">
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-ametista" title="Anéis de noivado com Ametista">
-                      
-                            <span> 
-                            <img src="{{ path('pedra1.png') }}" alt="seta dos Anéis de noivado ametista">    
-                            Ametista</span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-citrino" title="Anéis de noivado com Citrino">
-                            <span>
-                            <img src="{{ path('pedra2.png') }}" alt="seta dos Anéis de noivado citrino">Citrino</span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-esmeralda" title="Anéis de noivado com Esmeralda">
-                            <span>
-                            <img src="{{ path('pedra3.png') }}" alt="seta dos Anéis de noivado esmeralda">
-                            Esmeralda
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-diamante-negro" title="Anéis de noivado com diamantes Negros ">
-                            <span>
-                            <img src="{{ path('pedra4.png') }}" alt="seta dos Anéis de noivado diamentes negros">
-                                Diamantes Negros
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-granada" title="Anéis de noivado com granada">
-                            <span>
-                            <img src="{{ path('pedra5.png') }}" alt="seta dos Anéis de noivado granada">
-                                Granada
-                            </span>
-                        </a>
-                    </li>
-                    </div>
-                    <div class="grid-menu">
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-rubi" title="Anéis de noivado com Rubi">
-                            <span>
-                            <img src="{{ path('pedra6.png') }}" alt="seta dos Anéis de noivado com rubi">
-                                Rubi
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-safira" title="Anéis de noivado com safira">
-                            <span>
-                            <img src="{{ path('pedra7.png') }}" alt="seta dos Anéis de noivado"com safira>
-                                Safira
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-safira-rosa" title="Anéis de noivado com safira rosa">
-                            <span>
-                            <img src="{{ path('pedra8.png') }}" alt="seta dos Anéis de noivado com safira rosa">
-                                safira rosa
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-tanzanita" title="Anéis de noivado com Tanzania">
-                            <span>
-                            <img src="{{ path('pedra9.png') }}" alt="seta dos Anéis de noivado tanzania">
-                                Tanzania 
-                            </span>
-                        </a>
-                    </li>
-                    <li class="item-menu">
-                        <a href="/aneis-de-noivado-com-topazio-azul" title="Anéis de noivado com Topázio ">
-                            <span>
-                            <img src="{{ path('pedra10.png') }}" alt="seta dos Anéis de noivado com topazio">
-                                Topázio
-                            </span>
-                        </a>
-                    </li>
-                    </div>
-                 
-                  
-                </ul>
-                <div class="banner-menu-alianca">
-                    <a href="https://blog.reisman.com.br/certificado-de-diamante-gia/" target="_blank" title="acessar certificados de diamantes GIA ">
-                     <img src="{{ path('banner-gia-alianca.png') }}" alt="banner dos Anéis de noivado">
+        <li class="menu-coluna">
+            <span class="menu-title">Anéis de noivado com diamantes</span>
+            <ul>
+                <li><a href="/aneis-de-noivado-com-diamantes" title="Anéis de noivado com diamantes">Anéis com
+                        diamantes</a></li>
+                <li>
+                    <a href="/diamantes-certificados-laudo-ibgm-gia"
+                        title="Diamantes certificados com laudo IBGM e GIA">
+                        Diamantes certificados GIA e IBGM
                     </a>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </li>
 
-    </div>
-</div>
+        <li class="menu-coluna menu-pedras">
+            <span class="menu-title">Anéis de noivado com pedras coloridas</span>
+
+            <ul class="menu-pedras-grid">
+                <li><a href="/aneis-de-noivado-com-ametista" title="Anéis de noivado com ametista">Ametista</a></li>
+                <li><a href="/aneis-de-noivado-com-citrino" title="Anéis de noivado com citrino">Citrino</a></li>
+                <li><a href="/aneis-de-noivado-com-esmeralda" title="Anéis de noivado com esmeralda">Esmeralda</a></li>
+                <li><a href="/aneis-de-noivado-com-diamante-negro" title="Anéis de noivado com diamante negro">Diamante
+                        negro</a></li>
+                <li><a href="/aneis-de-noivado-com-granada" title="Anéis de noivado com granada">Granada</a></li>
+                <li><a href="/aneis-de-noivado-com-rubi" title="Anéis de noivado com rubi">Rubi</a></li>
+                <li><a href="/aneis-de-noivado-com-safira" title="Anéis de noivado com safira">Safira</a></li>
+                <li><a href="/aneis-de-noivado-com-safira-rosa" title="Anéis de noivado com safira rosa">Safira rosa</a>
+                </li>
+                <li><a href="/aneis-de-noivado-com-tanzanita" title="Anéis de noivado com tanzanita">Tanzanita</a></li>
+                <li><a href="/aneis-de-noivado-com-topazio-azul" title="Anéis de noivado com topázio azul">Topázio
+                        azul</a></li>
+            </ul>
+
+
+        </li>
+
+    </ul>
+</nav>
