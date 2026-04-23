@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initItemFilters();
   setupScrollHeader();
   initCookieAlert();
+  setupSecuritySealsSEO();
 
   setInterval(() => {
     const cartItemImages = document.querySelectorAll(
@@ -449,4 +450,25 @@ function getCookie(cname) {
     }
   }
   return "";
+}
+
+// === Ajuste de SEO e Acessibilidade para Selos de Segurança ===
+function setupSecuritySealsSEO() {
+  // Seleciona os selos comuns ou pelas URLs de suas imagens
+  const selos = document.querySelectorAll('.selos-seguranca img, .security-badges img, footer img[src*="gia" i], footer img[src*="segura" i], footer img[src*="ssl" i]');
+  
+  selos.forEach(img => {
+    // Dedução do nome baseando-se no arquivo da imagem
+    let nomeSelo = "Selo de Segurança Reisman";
+    if (img.src.toLowerCase().includes('gia')) nomeSelo = "Certificado GIA";
+    if (img.src.toLowerCase().includes('segura') || img.src.toLowerCase().includes('compra')) nomeSelo = "Site Seguro - Compra Garantida";
+    if (img.src.toLowerCase().includes('ssl')) nomeSelo = "Certificado SSL de Segurança";
+
+    if (!img.hasAttribute('alt') || img.getAttribute('alt').trim() === "") {
+      img.setAttribute('alt', nomeSelo);
+    }
+    if (!img.hasAttribute('title') || img.getAttribute('title').trim() === "") {
+      img.setAttribute('title', nomeSelo);
+    }
+  });
 }

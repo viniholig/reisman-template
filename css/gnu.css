@@ -4,11 +4,11 @@
   width: 100%;
   padding: 0 1rem;
   margin: auto;
-  align-items: center
+  align-items: center;
 }
 
 button.item-filtro.ultimo .price:first-child::before {
-  content: 'Acima de ';
+  content: "Acima de ";
   color: #000;
   font-size: 13px;
 }
@@ -35,7 +35,7 @@ button.item-filtro.ultimo .price:last-child {
 
 .filtros .title {
   padding: 0 1rem;
-  opacity: .5;
+  opacity: 0.5;
   display: flex;
   justify-content: space-between;
 }
@@ -45,7 +45,7 @@ bs-modal-container.modal.fade.in {
 }
 
 .div-filtros .item-filtro.checked {
-  border: .5px solid #9E9E9E;
+  border: 0.5px solid #9e9e9e;
 }
 
 #filtros {
@@ -59,7 +59,10 @@ bs-modal-container.modal.fade.in {
   left: 45%;
   background-color: #fff;
   border: 1px solid #dfdfdf;
-  transition: left 0s .2s, top .2s, opacity .2s;
+  transition:
+    left 0s 0.2s,
+    top 0.2s,
+    opacity 0.2s;
   text-align: left;
   z-index: 9;
   border-radius: 0;
@@ -113,7 +116,7 @@ div#filtro-faixa_de_preco {
 .div-filtros .item-filtro {
   display: flex;
   border: none;
-  opacity: .5;
+  opacity: 0.5;
   justify-content: center;
   width: 100%;
   text-align: left;
@@ -188,7 +191,7 @@ h3.collapse-filtro {
   text-transform: uppercase;
   font-size: 14px;
   color: #5e5e56;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 h3.collapse-filtro svg {
@@ -213,14 +216,13 @@ a#btn-adicionarCart {
 input#inputCEPModal::placeholder {
   font-size: 13px;
   font-weight: 400;
-
 }
 
 .frete-preview-input div#calcular-frete {
   margin-top: 8px;
 }
 
-.checkout-cart-preview .canopus-cart-goto-checkout>span {
+.checkout-cart-preview .canopus-cart-goto-checkout > span {
   background: #000 !important;
 }
 
@@ -254,7 +256,9 @@ a.wppButton {
   right: 10px;
   width: 60px;
   height: 60px;
-  background: #45c556 url(https://assets.betalabs.net/production/reisman/images/stores/1/wpp.svg) center no-repeat;
+  background: #45c556
+    url(https://assets.betalabs.net/production/reisman/images/stores/1/wpp.svg)
+    center no-repeat;
   background-size: 36px;
   display: block;
   z-index: 999;
@@ -321,7 +325,7 @@ a.wppButton::before {
 }
 
 .tingle-modal {
-  background: rgba(0, 0, 0, .4) !important;
+  background: rgba(0, 0, 0, 0.4) !important;
 }
 
 .checkout-cart-preview button.btn.btn-link.btn-remove-item {
@@ -359,7 +363,7 @@ header {
 
 @media screen and (max-width: 767px) {
   .searchForm form.busca-Search {
-    border: 1px solid
+    border: 1px solid;
   }
 
   header.header.desktop.bg-home:not(.active, .fixed) {
@@ -385,7 +389,7 @@ header {
   } */
 }
 
-@media screen and (min-width:1100px) {
+@media screen and (min-width: 1100px) {
   header .toggleMobile {
     display: none !important;
   }
@@ -404,7 +408,6 @@ header {
   .vbox-next {
     right: 15% !important;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -415,7 +418,6 @@ header {
   header .desktop .aside-box .item:not(.cart) {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -436,7 +438,6 @@ header.header.desktop.bg-home {
   position: relative;
   z-index: 9999;
   background-color: transparent !important;
-
 }
 
 header .desktop {
@@ -459,10 +460,11 @@ header .desktop .menu-box {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-
 }
 
-header.header.desktop.bg-home .menu-top-desktop.com-filhos .submenu-top-desktop-div {
+header.header.desktop.bg-home
+  .menu-top-desktop.com-filhos
+  .submenu-top-desktop-div {
   background: #fbf7f1 !important;
 }
 
@@ -475,7 +477,6 @@ header .desktop .menu-box .menu-top-desktop a {
 }
 
 header .desktop .logo-area {
-
   text-align: center;
 }
 
@@ -511,7 +512,8 @@ header .desktop .aside-box .item a {
 }
 
 header .desktop .aside-box .item.search i {
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/search.svg) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/search.svg)
+    no-repeat;
   background-size: contain;
   display: inline-block;
   width: 15px;
@@ -526,14 +528,14 @@ header .desktop .aside-box .item.cart {
   height: 18px;
   position: relative;
   top: -2px;
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/bag.svg) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/bag.svg)
+    no-repeat;
   background-size: contain !important;
 }
 
 /*header.fixed .menu-top-desktop.com-filhos .submenu-top-desktop-div {*/
 /*filter: invert(0);*/
 /*}*/
-
 
 header .menu-top-desktop.com-filhos .submenu-top-desktop-div {
   opacity: 0;
@@ -542,7 +544,9 @@ header .menu-top-desktop.com-filhos .submenu-top-desktop-div {
   /*filter: invert(1);*/
 }
 
-header .menu-top-desktop.com-filhos.text-center:hover>.submenu-top-desktop-div.text-left {
+header
+  .menu-top-desktop.com-filhos.text-center:hover
+  > .submenu-top-desktop-div.text-left {
   opacity: 1 !important;
   visibility: visible;
 }
@@ -580,7 +584,7 @@ header .menu-top-desktop.com-filhos.text-center:hover>.submenu-top-desktop-div.t
   z-index: 9999;
   max-height: 100vh;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, .3) 0px 0px 2px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 2px 0px;
 }
 
 .linkSearch a {
@@ -612,7 +616,8 @@ input.form-control.input-search {
 }
 
 header .desktop .aside-box .item.search.active i.search {
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/close.svg) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/close.svg)
+    no-repeat;
   background-size: contain;
   filter: invert(1);
 }
@@ -633,7 +638,7 @@ header.header.desktop.fixed {
   width: 100%;
   top: 0;
   background: #fff !important;
-  box-shadow: rgba(0, 0, 0, .3) 0px 0px 10px 0px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 10px 0px;
 }
 
 @media screen and (min-width: 767px) {
@@ -681,7 +686,6 @@ header a.bt-logout.logado {
 }
 
 .container-account span {
-
   font-size: 14px !important;
 }
 
@@ -701,7 +705,6 @@ header.header.desktop.fixed .container-account {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-
 }
 
 .container-account a {
@@ -751,7 +754,9 @@ header .desktop .aside-box .item a {
   /* display: none !important; */
 }
 
-.div-pai-personalizar.div-pai-com-buttons .btn-personalizar-produto span#nome-cor {
+.div-pai-personalizar.div-pai-com-buttons
+  .btn-personalizar-produto
+  span#nome-cor {
   margin-bottom: 0.5rem;
 }
 
@@ -785,7 +790,7 @@ div#linkWebstorie {
 
 @media screen and (max-width: 767px) {
   #linkWebstorie img {
-    max-height: 120px
+    max-height: 120px;
   }
 
   #linkWebstorie .slick-list {
@@ -826,7 +831,7 @@ div#priceProduto b {
 
 .infoReis li {
   list-style: none;
-  margin-bottom: 15px
+  margin-bottom: 15px;
 }
 
 .infoReis ul {
@@ -844,7 +849,8 @@ div#priceProduto b {
   width: 20px;
   background-size: contain !important;
   height: 20px;
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/bag.svg) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/bag.svg)
+    no-repeat;
   margin-right: 0.5rem;
 }
 
@@ -860,7 +866,6 @@ div#priceProduto b {
     max-width: 95%;
     max-height: 95%;
   }
-
 }
 
 section.textSaibaMais img {
@@ -909,7 +914,8 @@ section.textSaibaMais {
   width: 20px;
   background-size: contain !important;
   height: 20px;
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/minus.png) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/minus.png)
+    no-repeat;
 }
 
 .description i.plus {
@@ -918,7 +924,8 @@ section.textSaibaMais {
   width: 16px;
   background-size: contain !important;
   height: 16px;
-  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/plus.svg) no-repeat;
+  background: url(https://assets.betalabs.net/production/reisman/images/stores/1/plus.svg)
+    no-repeat;
 }
 
 .content #div-descricao-produto {
@@ -1004,12 +1011,12 @@ section.textSaibaMais {
 }
 
 .novoPreco .priceItem {
-  padding: 0
+  padding: 0;
 }
 
 @media screen and (min-width: 767px) {
   .novoPreco .priceItem {
-    margin-left: 50px
+    margin-left: 50px;
   }
 }
 
@@ -1044,7 +1051,6 @@ div#div-preco-produto {
 }
 
 .content #div-descricao-produto .description p {
-
   font-size: 14px;
   font-weight: 400;
   text-align: left;
@@ -1079,7 +1085,7 @@ div#div-produtos-relacionados .title {
 #div-produtos-relacionados h3 {
   font-weight: 300;
   color: #000;
-  opacity: .6;
+  opacity: 0.6;
   font-size: 1rem;
   font-weight: 300;
 }
@@ -1181,7 +1187,6 @@ div#div-produtos-relacionados .title {
   max-height: 600px;
 }
 
-
 .clientArea {
   text-align: center;
 }
@@ -1272,7 +1277,7 @@ div#div-produtos-relacionados .title {
       display: none;
   } */
   .infoReis li span {
-    margin-left: 5px
+    margin-left: 5px;
   }
 
   .newImgDescription .img-col-3 {
@@ -1289,8 +1294,8 @@ div#div-produtos-relacionados .title {
 }
 
 font-face {
-
-  src: url("https://use.typekit.net/xho6dxr.css") format("woff2"),
+  src:
+    url("https://use.typekit.net/xho6dxr.css") format("woff2"),
     url("https://use.typekit.net/xho6dxr.css") format("woff"),
     url("https://use.typekit.net/xho6dxr.css") format("opentype");
   font-weight: 400;
@@ -1298,8 +1303,8 @@ font-face {
 }
 
 @font-face {
-
-  src: url("https://use.typekit.net/xho6dxr.css") format("woff2"),
+  src:
+    url("https://use.typekit.net/xho6dxr.css") format("woff2"),
     url("https://use.typekit.net/xho6dxr.css") format("woff"),
     url("https://use.typekit.net/xho6dxr.css") format("opentype");
   font-weight: 300;
@@ -1307,8 +1312,8 @@ font-face {
 }
 
 @font-face {
-
-  src: url("https://use.typekit.net/xho6dxr.css") format("woff2"),
+  src:
+    url("https://use.typekit.net/xho6dxr.css") format("woff2"),
     url("https://use.typekit.net/xho6dxr.css") format("woff"),
     url("https://use.typekit.net/xho6dxr.css") format("opentype");
   font-weight: 700;
@@ -1323,7 +1328,6 @@ font-face {
 #div-depoimentos-produto .title,
 #div-produtos-relacionados .title,
 #div-opinioes .title {
-
   text-align: center !important;
   font-size: 20px !important;
   line-height: 29px !important;
@@ -1498,7 +1502,9 @@ display: none;
   font-weight: 300 !important;
 }
 
-header.header.desktop.bg-black .menu-top-desktop.com-filhos .submenu-top-desktop-div {
+header.header.desktop.bg-black
+  .menu-top-desktop.com-filhos
+  .submenu-top-desktop-div {
   /*filter: initial !important;*/
   background: #fbf7f1 !important;
 }
@@ -1571,32 +1577,38 @@ span.productGroupingSKU {
 }
 
 .productionGrouping .varations button.Ouro.amarelo {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ouroamarelo18k.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ouroamarelo18k.png")
+    no-repeat;
   background-size: contain;
 }
 
 .productionGrouping .varations button.Ouro.branco {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ourobranco.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ourobranco.png")
+    no-repeat;
   background-size: contain;
 }
 
 .productionGrouping .varations button.Ouro.rose {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ourorose.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/ourorose.png")
+    no-repeat;
   background-size: contain;
 }
 
 .productionGrouping .varations button.Ouro.amarelo.e.branco {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/amareloebranco.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/amareloebranco.png")
+    no-repeat;
   background-size: contain;
 }
 
 .productionGrouping .varations button.Ouro.amarelo.e.rose {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/amareloerose.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/amareloerose.png")
+    no-repeat;
   background-size: contain;
 }
 
 .productionGrouping .varations button.Ouro.branco.e.rose {
-  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/brancoerose.png") no-repeat;
+  background: url("https://assets.betalabs.net/production/reisman/images/stores/1/brancoerose.png")
+    no-repeat;
   background-size: contain;
 }
 
@@ -1633,7 +1645,7 @@ span.productGroupingSKU {
 /*  max-height: 486px;*/
 /*}*/
 
-.galleryImg .img:nth-child(2n+1) {
+.galleryImg .img:nth-child(2n + 1) {
   padding-right: 4px;
 }
 
@@ -1715,7 +1727,7 @@ div#div-alianca-feminina {
 
 @media screen and (min-width: 767px) {
   .priceItem.mercado::before {
-    content: 'sd';
+    content: "sd";
     position: absolute;
     margin-left: -24px;
     color: transparent;
@@ -1759,7 +1771,9 @@ div#div-alianca-feminina {
   margin-bottom: 10px;
 }
 
-.div-pai-personalizar.div-pai-com-options.selecionaTamanhos:not(.tamanhos-9-a-23) {
+.div-pai-personalizar.div-pai-com-options.selecionaTamanhos:not(
+    .tamanhos-9-a-23
+  ) {
   order: 10;
 }
 
@@ -1912,11 +1926,11 @@ button.filtrar.preco {
 /*        filter: invert(1);*/
 /*    }*/
 /*}*/
-.div-filtros .item-filtro>.price {
+.div-filtros .item-filtro > .price {
   width: 60px;
 }
 
-.div-filtros .item-filtro>span:not(.price) {
+.div-filtros .item-filtro > span:not(.price) {
   width: 20px;
   text-align: center;
   margin-right: 10px;
@@ -1977,32 +1991,32 @@ button.filtrar.preco {
   gap: 7px;
 }
 
-.receiveImgs>div>div {
+.receiveImgs > div > div {
   width: 16px;
   height: 16px;
   border-radius: 100%;
   cursor: pointer;
 }
 
-.receiveImgs>div {
+.receiveImgs > div {
   border-radius: 100%;
   padding: 2px;
   box-shadow: 0 0 0 1px #b6b6b6;
 }
 
-.receiveImgs>div.active {
+.receiveImgs > div.active {
   box-shadow: 0px 0px 0px 1px #000;
 }
 
-.receiveImgs>div>div.rose {
+.receiveImgs > div > div.rose {
   background: #fcb69f;
 }
 
-.receiveImgs>div>div.branco {
+.receiveImgs > div > div.branco {
   background: #bbbcbd;
 }
 
-.receiveImgs>div>div.amarelo {
+.receiveImgs > div > div.amarelo {
   background: #d9b162;
 }
 
@@ -2058,9 +2072,6 @@ button.item-filtro.faixa-Acima.de {
   margin-bottom: 10px;
 }
 
-
-
-
 /* ajustes carrinho  */
 .cart-row .append.attributes-extra-fields {
   display: block !important;
@@ -2070,7 +2081,9 @@ button.item-filtro.faixa-Acima.de {
   list-style: none;
 }
 
-.cart-row .append.attributes-extra-fields button.btn-attributes-extra-field-toggle {
+.cart-row
+  .append.attributes-extra-fields
+  button.btn-attributes-extra-field-toggle {
   display: none;
 }
 
@@ -2078,18 +2091,27 @@ button.item-filtro.faixa-Acima.de {
   padding-left: 0px !important;
 }
 
-.cart-row .append.attributes-extra-fields ul.gravacao_feminina li.attributes-extra-field-value::before {
-  content: 'Gravação aliança 2';
+.cart-row
+  .append.attributes-extra-fields
+  ul.gravacao_feminina
+  li.attributes-extra-field-value::before {
+  content: "Gravação aliança 2";
   font-weight: bold;
 }
 
-.cart-row .append.attributes-extra-fields ul.gravacao_masculina li.attributes-extra-field-value::before {
-  content: 'Gravação aliança 1';
+.cart-row
+  .append.attributes-extra-fields
+  ul.gravacao_masculina
+  li.attributes-extra-field-value::before {
+  content: "Gravação aliança 1";
   font-weight: bold;
 }
 
-.cart-row .append.attributes-extra-fields ul.gravacao_single li.attributes-extra-field-value::before {
-  content: 'Gravação Interna';
+.cart-row
+  .append.attributes-extra-fields
+  ul.gravacao_single
+  li.attributes-extra-field-value::before {
+  content: "Gravação Interna";
   font-weight: bold;
 }
 
@@ -2102,7 +2124,12 @@ button.item-filtro.faixa-Acima.de {
   order: 1;
 }
 
-.cart-row .append.attributes-extra-fields .attributes-extra-fields-details li.values ul li {
+.cart-row
+  .append.attributes-extra-fields
+  .attributes-extra-fields-details
+  li.values
+  ul
+  li {
   display: flex;
   flex-direction: column;
 }
@@ -2125,7 +2152,9 @@ header.header.desktop.bg-home:not(.fixed) .aside-box {
   }
 }
 
-header.header.desktop.bg-home .menu-top-desktop.com-filhos .submenu-top-desktop-div {
+header.header.desktop.bg-home
+  .menu-top-desktop.com-filhos
+  .submenu-top-desktop-div {
   background: #fbf7f1 !important;
   filter: invert(1);
 }
@@ -2145,7 +2174,6 @@ header.header.desktop.bg-home .menu-top-desktop.com-filhos .submenu-top-desktop-
 div#banners-top-home-mobile {
   height: 70vh;
   /*height: 50vh;*/
-
 }
 
 .home-video .home-video-main {
@@ -2154,8 +2182,6 @@ div#banners-top-home-mobile {
   height: 100%;
   overflow: hidden;
 }
-
-
 
 @media screen and (max-width: 767px) {
   header.header.desktop.bg-home.fixed .logo-area img {
@@ -2217,3 +2243,36 @@ input {
 /*    top: 0;*/
 /*    width: 100%;*/
 /*}*/
+
+.cookiealert {
+  position: fixed !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  z-index: 999999 !important; /* Garante que fique acima de modais, menus ou rodapé */
+}
+
+.cookiealert.show {
+  display: block !important; /* Garante a exibição */
+  opacity: 1 !important; /* Remove qualquer transparência */
+  visibility: visible !important; /* Força a visibilidade */
+  transform: none !important; /* Evita que a barra seja empurrada para fora da tela */
+  height: auto !important; /* Garante que ela tenha altura */
+}
+
+/* ============================================================
+   SELOS DE SEGURANÇA E CERTIFICADOS (GIA, SSL, Compra Segura)
+   Prevenção de layout shift (CLS) durante o carregamento
+   ============================================================ */
+.selos-seguranca img, 
+.security-badges img, 
+footer img[src*="gia" i], 
+footer img[src*="segura" i], 
+footer img[src*="ssl" i] {
+  height: 60px; /* Altura fixa reservada antes da imagem carregar (ajuste se precisar de selos maiores) */
+  width: auto;
+  min-width: 60px; /* Garante o espaço horizontal */
+  object-fit: contain;
+  display: inline-block;
+}
