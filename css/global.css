@@ -1977,6 +1977,38 @@ ol.breadcrumb-new li::before {
     }
 }
 
+@media (max-width:767px) {
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new {
+        flex-wrap: wrap;
+        row-gap: 4px;
+    }
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li,
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li a,
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li span {
+        font-size: 8px !important;
+    }
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li:last-child,
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li:last-child > span,
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li:last-child > strong {
+        font-size: 9px !important;
+    }
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li .breadcrumb-desktop {
+        display: none !important;
+    }
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li .breadcrumb-mobile {
+        display: inline !important;
+    }
+}
+
+@media (min-width:768px) {
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li .breadcrumb-desktop {
+        display: inline !important;
+    }
+    .containerProduct nav.breadcrumb-container ol.breadcrumb-new li .breadcrumb-mobile {
+        display: none !important;
+    }
+}
+
 .section-svg-home {
     width: 100%;
     background-size: cover !important;
