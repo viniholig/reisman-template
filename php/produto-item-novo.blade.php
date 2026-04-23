@@ -1,7 +1,7 @@
 <div class="product-block custom-css">
     <a @if ($item->urls->first()) href="{{ url($item->urls->first()->url) }}" @endif>
-        <figure class="img-card image -vertical">
-            @include(@engine_view('component_flag_categoria'))
+        <figure class="img-card image -vertical" style="aspect-ratio: 3 / 4;">
+            @include(@engine_view('component_flag_categoria')) //Flag para os cards de produto, caso haja categoria associada ao produto. O arquivo de flag deve ser criado seguindo o padrão "flag-{slug-da-categoria}.blade.php" e colocado dentro da pasta "components" do tema ativo.
             <img class="principal" width="300" height="400"
                 @if ($item->extraFields->has('thumb_produto')) src="https://assets.betalabs.net/production/reisman/{{ $item->extraFields->get('thumb_produto')->values->first->source->file_path }}"
                                     @else

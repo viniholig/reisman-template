@@ -1357,6 +1357,12 @@ header .aside-box .item.search {
     object-fit: contain
 }
 
+.product-block .img-card.image.-vertical {
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    display: block;
+}
+
 .product-block .description {
     font-family: Spectral, serif;
     margin-bottom: 0

@@ -16,7 +16,7 @@
         <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
+  "@type": "BreadcrumbList",Ç
   "itemListElement": [
     {
       "@type": "ListItem",
@@ -99,9 +99,6 @@
 </script>
     @endpush
 
-
-
-
     <div id="title-categoria" class="text-center font-serif">
         <h1>{{ $category->model->name }}</h1>
     </div>
@@ -113,45 +110,6 @@
             {!! $category->model->extraFields->get('descricao_categoria')->values->first()->value !!}
         </div>
     @endif
-    <!-- Aparecido, Foi removido em produção, retornei no preview para que possamos voltar se necessário. A pedido do Max -->
-    <div class="filter-categoria row">
-        <div class="preco">
-            <h3 class="collapse-filtro " id="filtro-abrir-faixa"> Filtrar por preço <img alt="Icon Filtro"
-                    src="{{ path('arrow-filter.png') }}"> </h3>
-
-            <div id="filtros-faixa-preco" class="filtros-faixa-preco">
-                <div class="title"><strong>Mínimo</strong><strong>Máximo</strong></div>
-                @foreach ($category->extraFields as $filtro)
-                    @if ($filtro->slug == 'faixa_de_preco')
-                        <div class="filtro" id="filtro-{{ $filtro->slug }}">
-
-                            <div class="div-filtros" id="filtro-{{ $filtro->label }}">
-
-                                @foreach ($filtro->values->sortBy(function ($filtro) {
-        return $filtro->values;
-    }) as $value)
-                                    <button type="button" class="item-filtro faixa-{{ $value->value }}"
-                                        filtro="{{ $filtro->slug }}" item="{{ $value->value }}"
-                                        value="{{ $value->value }}">
-                                        {{ $value->value }}
-                                    </button>
-                                @endforeach
-
-                            </div>
-                            <div class="text-left">
-                                <button type="button" class="filtrar preco" id="limpar">
-                                    <a href="{{ url()->current() }}">
-                                        Limpar filtros
-                                    </a>
-                                </button>
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-
-            </div>
-        </div>
-    </div>
 
     <div class="bredcrumb-new row container">
         <nav aria-label="Você está aqui:" class="breadcrumb-container">
@@ -230,6 +188,7 @@
             </ol>
         </nav>
     </div>
+
     <div id="produtos-categoria ">
         <div class="row text-center grid-category" canopus-showcase-infinite-scroll>
 @endif
@@ -250,7 +209,7 @@
                     data-order="@if ($itemFavorito->extraFields->has('ordem')) {{ $itemFavorito->extraFields->get('ordem')->values->first()->value }} @endif">
                     <div class="product-block custom-css">
                         <a @if ($itemFavorito->urls->first()) href="{{ url($itemFavorito->urls->first()->url) }}" @endif>
-                            <figure class="img-card image -vertical">
+                            <figure class="img-card image -vertical" style="aspect-ratio: 3 / 4;">
 
                                 <img class="principal" width="300" height="400"
                                     @if ($itemFavorito->extraFields->has('thumb_produto')) src="https://assets.betalabs.net/production/reisman/{{ $itemFavorito->extraFields->get('thumb_produto')->values->first->source->file_path }}"
@@ -323,7 +282,7 @@
                     data-order1="@if ($itemFavorito->extraFields->has('ordem')) {{ trim($itemFavorito->extraFields->get('ordem')->values->first()->value) }} @endif">
                     <div class="product-block custom-css">
                         <a @if ($itemFavorito->urls->first()) href="{{ url($itemFavorito->urls->first()->url) }}" @endif>
-                            <figure class="img-card image -vertical">
+                            <figure class="img-card image -vertical" style="aspect-ratio: 3 / 4;">
 
                                 <img class="principal" width="300" height="400"
                                     @if ($itemFavorito->extraFields->has('thumb_produto')) src="https://assets.betalabs.net/production/reisman/{{ $itemFavorito->extraFields->get('thumb_produto')->values->first->source->file_path }}"
@@ -395,7 +354,7 @@
                     data-order="@if ($itemFavorito->extraFields->has('ordem')) {{ $itemFavorito->extraFields->get('ordem')->values->first()->value }} @endif">
                     <div class="product-block custom-css">
                         <a @if ($itemFavorito->urls->first()) href="{{ url($itemFavorito->urls->first()->url) }}" @endif>
-                            <figure class="img-card image -vertical">
+                            <figure class="img-card image -vertical" style="aspect-ratio: 3 / 4;">
 
                                 <img class="principal" width="300" height="400"
                                     @if ($itemFavorito->extraFields->has('thumb_produto')) src="https://assets.betalabs.net/production/reisman/{{ $itemFavorito->extraFields->get('thumb_produto')->values->first->source->file_path }}"
