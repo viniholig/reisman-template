@@ -1,7 +1,5 @@
 <header class="header -@yield('page')" id="header">
-
-    <!--@include(@engine_view('component_header_topbar'))-->
-
+        @include(@engine_view('component_header_topbar'))
     <div class="container">
         @include(@engine_view('component_header_logo'))
         @include(@engine_view('component_header_menu_desktop'))
