@@ -1,11 +1,22 @@
 @extends(engine_view('base-produto'))
 @section('conteudo')
 @section('title', $produto->identification->name)
-@section('metadescription', $produto->identification->name )
+@section('metadescription', $produto->identification->name)
+@section('metadescription1', $produto->identification->name)
+@section('meta-property', $produto->identification->name)
+@section('meta-name', $produto->identification->name)
 
 
 <div class="containerProduct">
 <style>
+    @font-face {
+        font-family: "Magnificent";
+        src: url(https://assets.betalabs.net/production/reisman/fonts/stores/1/MagnificentRegular.otf) format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: optional;
+    }
+
     #footer {
         margin-bottom: 74px;
     }
@@ -58,6 +69,240 @@
 
 .galleryImg .img:nth-child(2n){
     padding: 0 !important;
+}
+
+#title-produto {
+    font-family: "Magnificent Product", Magnificent, Spectral, serif;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+}
+
+.slider-produto-principal1 .galleryImg {
+    min-height: 320px;
+}
+
+.galleryImg.mobile {
+    aspect-ratio: 1 / 1;
+    min-height: clamp(280px, 92vw, 640px);
+}
+
+.galleryImg.mobile .img,
+.galleryImg.mobile .img .my-image-links,
+.galleryImg.mobile .img img,
+.galleryImg.mobile .img .videoStyle {
+    aspect-ratio: 1 / 1;
+}
+
+.galleryImg.mobile .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #faf7f2;
+}
+
+.galleryImg.mobile:not(.slick-initialized) {
+    display: block;
+}
+
+.galleryImg.mobile:not(.slick-initialized) .img {
+    display: none;
+    width: 100% !important;
+    float: none;
+}
+
+.galleryImg.mobile:not(.slick-initialized) .img:first-child {
+    display: block;
+}
+
+.galleryImg.mobile .videoStyle iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#div-preco-produto {
+    min-height: 140px;
+}
+
+.novoPreco {
+    min-height: 98px;
+}
+
+#priceProduto {
+    min-height: 68px;
+}
+
+#priceProduto p {
+    margin-bottom: 0.25rem;
+}
+
+#div-video-produto {
+    min-height: 220px;
+}
+
+.product-video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    min-height: 220px;
+}
+
+.product-video-frame iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+@media (max-width: 767px) {
+    .slider-produto-principal1 {
+        min-height: clamp(280px, 92vw, 640px);
+    }
+
+    #div-personalizar-produtoBtn {
+        min-height: 15px;
+    }
+
+    #div-preco-produto {
+        min-height: 126px;
+    }
+
+    .product-video-frame {
+        min-height: 200px;
+    }
+}
+
+.newImgDescription .clientsSlider {
+    max-width: 1920px;
+    margin: 0 auto 24px;
+    min-height: 360px;
+}
+
+.newImgDescription .clientsSlider.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    touch-action: pan-y;
+}
+
+.newImgDescription .clientsSlider .slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.newImgDescription .clientsSlider .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newImgDescription .clientsSlider .slick-track:before,
+.newImgDescription .clientsSlider .slick-track:after {
+    display: table;
+    content: '';
+}
+
+.newImgDescription .clientsSlider .slick-track:after {
+    clear: both;
+}
+
+.newImgDescription .clientsSlider .slick-slide {
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+
+.newImgDescription .clientsSlider.slick-initialized .slick-slide {
+    display: block;
+}
+
+.newImgDescription .clientsSlider:not(.slick-initialized) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.newImgDescription .clientsSlider:not(.slick-initialized) .slideCaixa {
+    width: 640px;
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.newImgDescription .clientsSlider .img-Caixa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 360px;
+    padding: 12px;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+.newImgDescription .clientsSlider .slideCaixa {
+    padding: 0 0.5rem;
+    box-sizing: border-box;
+}
+
+.newImgDescription .clientsSlider .img-Caixa img {
+    width: 100%;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.newImgDescription .clientsSlider .slick-dots {
+    width: 100% !important;
+    left: 0 !important;
+    bottom: -24px;
+}
+
+.newImgDescription .clientsSlider .slick-dots li button:before {
+    color: #000;
+    opacity: 0.35;
+}
+
+.newImgDescription .clientsSlider .slick-dots li.slick-active button:before {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    .newImgDescription .clientsSlider {
+        max-width: 390px;
+        margin: 0 auto 34px;
+        min-height: 390px;
+    }
+
+    .newImgDescription .clientsSlider:not(.slick-initialized) {
+        display: block;
+    }
+
+    .newImgDescription .clientsSlider:not(.slick-initialized) .slideCaixa {
+        width: 390px;
+        padding: 0 0.5rem;
+    }
+
+    .newImgDescription .clientsSlider .img-Caixa {
+        min-height: 390px;
+    }
+
+    .newImgDescription .clientsSlider .slideCaixa {
+        padding: 0 0.5rem;
+    }
+
+    .newImgDescription .clientsSlider .img-Caixa img {
+        max-width: 340px;
+        max-height: 360px;
+    }
 }
 
    
@@ -201,7 +446,6 @@
     </li>
 	 <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" >
         <span itemprop="name"><strong>{{$produto->identification->name}}</strong></span>
-      </a>
       <meta itemprop="position" content="3">
     </li>
   </ol>
@@ -323,7 +567,7 @@
                       @if($produto->extraFields->get('campo_video_vimeo'))
                           <div class="img">
                               <div class="videoStyle my-video-links" >
-                                  <iframe data-testid="video-iframe" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
+                                  <iframe data-testid="video-iframe" title="Vídeo do produto {{ $produto->identification->name }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
                               </div>
                           </div>
                       @endif  
@@ -339,7 +583,7 @@
                       @if($produto->extraFields->has('campo_video_vimeo'))
                           <div class="img">
                               <div class=" my-video-links" href="https://vimeo.com/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?h=defbd6516b&muted=1&autoplay=1&controls=0&loop=1">
-                                  <iframe data-testid="video-iframe" width="540" height="545" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
+                                  <iframe data-testid="video-iframe" title="Vídeo do produto {{ $produto->identification->name }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" width="540" height="545" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
                               </div>
                           </div>
                       @endif  
@@ -457,7 +701,7 @@
                 @if($produto->extraFields->get('campo_video_vimeo'))
                     <div class="img">
                         <div class="videoStyle my-video-links">
-                            <iframe data-testid="video-iframe" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
+                            <iframe data-testid="video-iframe" title="Vídeo do produto {{ $produto->identification->name }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('campo_video_vimeo')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
                         </div>
                     </div>
                 @endif  
@@ -470,7 +714,7 @@
                 @if($produto->extraFields->has('link_video'))
                     <div class="img">
                         <div class="my-video-links" href="https://vimeo.com/{{ $produto->extraFields->get('link_video')->values->first()->value }}?h=defbd6516b&muted=1&autoplay=1&controls=0&loop=1">
-                            <iframe data-testid="video-iframe" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('link_video')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
+                            <iframe data-testid="video-iframe" title="Vídeo do produto {{ $produto->identification->name }}" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" width="640" height="640" src="https://player.vimeo.com/video/{{ $produto->extraFields->get('link_video')->values->first()->value }}?autoplay=1&amp;loop=1&amp;controls=0&amp;autopause=1&amp;muted=1" class="styled__IFrame-sc-ma87h6-1 fHujjV"></iframe>
                         </div>
                     </div>
                 @endif 
@@ -485,9 +729,9 @@
     @else
         <div class="col-lg-4 col-sm-12 infoProduto product-of-Stock">    
     @enditemAvailable
-        <div id="title-produto">
+        <h1 id="title-produto">
           {{ $produto->identification->name }}
-        </div>
+        </h1>
          
       
         <div id="subtitle-produto">
@@ -945,18 +1189,14 @@
         <span itemprop="priceCurrency" content="R$"></span>
         <div class="product-price price">R$ <span content="{{ number_format($produto->prices->last()->price, 2, ',', '.') }}"> {{ number_format($produto->prices->last()->price, 2, ',', '.') }} </span></div>
               <div id="preco-natural">R$ <span id="price-p">{{ number_format($produto->prices->first()->price, 2, ',', '.') }}</span>
-             <span id=itsPar>
+             <span id="itsPar">
              @if($produto->extraFields->has('e_alianca') && $produto->extraFields->get('e_alianca')->values->first()->extraFieldOption->label == 'Sim' && $produto->extraFields->has('e_par_de_aliancas') && $produto->extraFields->get('e_alianca')->values->first()->extraFieldOption->label == 'Sim')
                 o par
               @endif
              </span></div>
               <div id="price-10-vezes">10x de R$ <span>{{ number_format($produto->prices->first()->price / 10, 2, ',', '.') }}</span></div>
               <div id="price-a-vista">ou R$ <span>{{ number_format($produto->prices->first()->price * 0.9, 2, ',', '.') }}</span> à vista (10% OFF)</div>
-              
-              em 10x R$ {{ number_format($produto->prices->first()->price / 10, 2, ',', '.') }}</p
-              <p>ou <b>R$ {{ number_format($produto->prices->first()->price, 2, ',', '.') }}</b>  no Boleto</p>
-              
-              
+
             </div>
             <div class="novoPreco">
                 <div class="txtPrice">
@@ -991,7 +1231,17 @@
                     </div>  
                 </div>   
             </div>
-             <div id="priceProduto">
+             <div id="priceProduto" data-loading="true" aria-live="polite">
+                <p>
+                    R$ {{ number_format($produto->prices->first()->price * 0.9, 2, ',', '.') }} no pix
+                    <span id="priceProdutoParLabel">
+                        @if($produto->extraFields->has('e_alianca') && $produto->extraFields->get('e_alianca')->values->first()->extraFieldOption->label == 'Sim' && $produto->extraFields->has('e_par_de_aliancas') && $produto->extraFields->get('e_alianca')->values->first()->extraFieldOption->label == 'Sim')
+                            o par
+                        @endif
+                    </span>
+                    <span class="flag">promoção</span>
+                </p>
+                <p>ou <b>10x R$ {{ number_format($produto->prices->first()->price / 10, 2, ',', '.') }}</b> no cartão</p>
             </div>   
             <div id="btn-comprar" data-id="{{ $produto->model->id }}" class="div-btn-comprar" quantity="1">
                 Comprar
@@ -1111,7 +1361,7 @@
     </div> 
     <div id="modal-webstories" class="tingle-modal webstories " tabindex="-1" role="dialog">
     <button class="tingle-modal__close"><span class="tingle-modal__closeIcon">×</span><span class="tingle-modal__closeLabel"></span></button>
-   <iframe src=""></iframe>     
+   <iframe title="Web Stories do produto" loading="lazy" src=""></iframe>     
 </div>
         
        
@@ -1143,7 +1393,9 @@
 
 @if($produto->extraFields->has('codigo_video_youtube'))
 <div id="div-video-produto">
-    <iframe id="iframe-video" src="https://www.youtube.com/embed/{{ $produto->extraFields->get('codigo_video_youtube')->values->first()->value }}?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="product-video-frame">
+        <iframe id="iframe-video" title="Vista lateral do produto {{ $produto->identification->name }}" loading="lazy" width="900" height="506" src="https://www.youtube.com/embed/{{ $produto->extraFields->get('codigo_video_youtube')->values->first()->value }}?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
 </div>
 @endif
 <div class="newImgDescription">
@@ -1156,7 +1408,7 @@
           
             <div class="clientsSlider">
                    @foreach($caixa01->records as $imgCaixa01)
-                <div id="slideCaixa">
+                <div class="slideCaixa">
                     <div class="img-Caixa">
                         <img src="{{ $imgCaixa01->imagem_caixa_do_produto_01->values->first()->source  }}"> 
                     </div>   
@@ -1170,7 +1422,7 @@
         @if($caixa02->records->count() > 0)
             <div class="clientsSlider">
                    @foreach($caixa02->records as $imgCaixa02)
-                <div id="slideCaixa">
+                <div class="slideCaixa">
                     <div class="img-Caixa">
                         <img src="{{ $imgCaixa02->imagem_caixa_do_produto_02->values->first()->source  }}"> 
                     </div>   
@@ -1184,7 +1436,7 @@
         @if($caixa03->records->count() > 0)
             <div class="clientsSlider">
                    @foreach($caixa03->records as $imgCaixa03)
-                <div id="slideCaixa">
+                <div class="slideCaixa">
                     <div class="img-Caixa">
                         <img src="{{ $imgCaixa03->imagem_caixa_do_produto_03->values->first()->source  }}"> 
                     </div>   
@@ -1198,7 +1450,7 @@
         @if($caixa04->records->count() > 0)
             <div class="clientsSlider">
                    @foreach($caixa04->records as $imgCaixa04)
-                <div id="slideCaixa">
+                <div class="slideCaixa">
                     <div class="img-Caixa">
                         <img src="{{ $imgCaixa04->imagem_caixa_do_produto_04->values->first()->source  }}"> 
                     </div>   
@@ -1209,6 +1461,117 @@
         @endif
     @endif
 </div>
+
+<script>
+    (function () {
+        if (window.__newImgDescriptionInlineInitDone) return;
+        window.__newImgDescriptionInlineInitDone = true;
+
+        var slickLoaderRequested = false;
+        function ensureSlickLoaded() {
+            if (slickLoaderRequested) return;
+            if (!window.jQuery || (jQuery.fn && typeof jQuery.fn.slick === 'function')) return;
+            slickLoaderRequested = true;
+            var script = document.createElement('script');
+            script.src = "{{ script('slick.js') }}";
+            script.async = true;
+            script.onload = function () {
+                setTimeout(tryInitClientsSlider, 0);
+            };
+            script.onerror = function () {
+                var cdnScript = document.createElement('script');
+                cdnScript.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+                cdnScript.async = true;
+                cdnScript.onload = function () {
+                    setTimeout(tryInitClientsSlider, 0);
+                };
+                document.head.appendChild(cdnScript);
+            };
+            document.head.appendChild(script);
+        }
+
+        function tryInitClientsSlider() {
+            if (!window.jQuery || !jQuery.fn || typeof jQuery.fn.slick !== 'function') {
+                return false;
+            }
+
+            var $sliders = jQuery('.newImgDescription .clientsSlider');
+            if (!$sliders.length) return true;
+
+            $sliders.each(function () {
+                var $slider = jQuery(this);
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.attr('data-slick-status', 'initialized');
+                    return;
+                }
+
+                $slider.attr('data-slick-status', 'initializing');
+
+                $slider.slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    adaptiveHeight: false,
+                    swipe: true,
+                    draggable: true,
+                    touchMove: true,
+                    swipeToSlide: true,
+                    mobileFirst: false,
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                adaptiveHeight: false,
+                                swipe: true,
+                                draggable: true,
+                                touchMove: true,
+                                swipeToSlide: true
+                            }
+                        }
+                    ]
+                });
+
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.attr('data-slick-status', 'initialized');
+                } else {
+                    $slider.attr('data-slick-status', 'not-initialized');
+                }
+            });
+
+            return jQuery('.newImgDescription .clientsSlider.slick-initialized').length > 0;
+        }
+
+        var tries = 0;
+        var timer = setInterval(function () {
+            tries += 1;
+            if (tryInitClientsSlider() || tries >= 180) {
+                clearInterval(timer);
+                return;
+            }
+            ensureSlickLoaded();
+        }, 100);
+
+        if (document.readyState === 'interactive' || document.readyState === 'complete') {
+            setTimeout(tryInitClientsSlider, 0);
+        } else {
+            document.addEventListener('DOMContentLoaded', function () {
+                setTimeout(tryInitClientsSlider, 0);
+            });
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(tryInitClientsSlider, 0);
+            setTimeout(tryInitClientsSlider, 300);
+        });
+    })();
+</script>
 
 
 
@@ -2112,6 +2475,114 @@ try {
 @endpush
 @push('scripts')
 <script src="{{ script('produto.js') }}" defer></script>
+<script>
+    (function () {
+        var initialized = false;
+        var slickLoaderRequested = false;
+
+        function tryInitClientsSlider() {
+            if (initialized) return true;
+            if (!window.jQuery || !jQuery.fn || typeof jQuery.fn.slick !== 'function') {
+                return false;
+            }
+
+            var $sliders = jQuery('.newImgDescription .clientsSlider');
+            if (!$sliders.length) return true;
+
+            $sliders.each(function () {
+                var $slider = jQuery(this);
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.attr('data-slick-status', 'initialized');
+                    return;
+                }
+
+                $slider.attr('data-slick-status', 'initializing');
+
+                $slider.slick({
+                    dots: false,
+                    arrows: false,
+                    infinite: false,
+                    speed: 300,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    adaptiveHeight: false,
+                    swipe: true,
+                    draggable: true,
+                    touchMove: true,
+                    swipeToSlide: true,
+                    mobileFirst: false,
+                    responsive: [
+                        {
+                            breakpoint: 767,
+                            settings: {
+                                dots: true,
+                                arrows: false,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                adaptiveHeight: false,
+                                swipe: true,
+                                draggable: true,
+                                touchMove: true,
+                                swipeToSlide: true
+                            }
+                        }
+                    ]
+                });
+
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.attr('data-slick-status', 'initialized');
+                } else {
+                    $slider.attr('data-slick-status', 'not-initialized');
+                }
+            });
+
+            initialized = jQuery('.newImgDescription .clientsSlider.slick-initialized').length > 0;
+            return initialized;
+        }
+
+        function ensureSlickLoaded() {
+            if (slickLoaderRequested) return;
+            if (!window.jQuery || (jQuery.fn && typeof jQuery.fn.slick === 'function')) return;
+            slickLoaderRequested = true;
+
+            var script = document.createElement('script');
+            script.src = "{{ script('slick.js') }}";
+            script.async = true;
+            script.onload = function () {
+                setTimeout(tryInitClientsSlider, 0);
+            };
+            script.onerror = function () {
+                var cdnScript = document.createElement('script');
+                cdnScript.src = 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+                cdnScript.async = true;
+                cdnScript.onload = function () {
+                    setTimeout(tryInitClientsSlider, 0);
+                };
+                document.head.appendChild(cdnScript);
+            };
+            document.head.appendChild(script);
+        }
+
+        var tries = 0;
+        var timer = setInterval(function () {
+            tries += 1;
+            if (tryInitClientsSlider() || tries >= 180) {
+                clearInterval(timer);
+                return;
+            }
+            ensureSlickLoaded();
+        }, 100);
+
+        window.addEventListener('load', function () {
+            tryInitClientsSlider();
+            setTimeout(tryInitClientsSlider, 300);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            tryInitClientsSlider();
+        });
+    })();
+</script>
 @endpush
 
 @endsection

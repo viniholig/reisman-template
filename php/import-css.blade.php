@@ -1,6 +1,6 @@
    <link href="{{ stylesheet('bootstrap.css') }}" rel="stylesheet">
-   <link rel="stylesheet" href="{{ stylesheet('reisman.css') }}">
-   @if (starts_with(request()->path(), 'checkout'))
+   <link rel="preload" href="{{ stylesheet('reisman.css') }}" as="style">
+   <link rel="stylesheet" href="{{ stylesheet('reisman.css') }}">   @if (starts_with(request()->path(), 'checkout'))
        <link rel="stylesheet" href="{{ stylesheet('checkout.css') }}">
    @elseif(starts_with(request()->path(), 'account'))
        <link rel="stylesheet" href="{{ stylesheet('account.css') }}">

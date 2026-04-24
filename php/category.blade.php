@@ -16,7 +16,7 @@
         <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",Ç
+  "@type": "BreadcrumbList",
   "itemListElement": [
     {
       "@type": "ListItem",
